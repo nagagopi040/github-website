@@ -7,8 +7,8 @@ export class RepoHeader extends Component {
                 <a href="#">Overview</a>
                 <a href="#" className="active">Repositories(12)</a>
                 <a href="#">Stars(6)</a>
-                <a href="#">Followers(2)</a>
-                <a href="#">Following(2)</a>
+                <a href="#" className="mobile-hide">Followers(2)</a>
+                <a href="#" className="mobile-hide">Following(2)</a>
             </div>
         )
     }

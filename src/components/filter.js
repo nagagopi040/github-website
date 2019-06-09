@@ -30,8 +30,11 @@ export class Filter extends Component {
         return (
             <div className="repo-filter">
                 <input className="filter-search" type="text" placeholder="Find a repository..." value={this.state.searchText} onChange={this.onChange} />
-                <DropDown items={this.state.types} label="Type" onItemClick={(value) => onTypeClick(value)} />
-                <DropDown items={languages} label="Language" onItemClick={(value) => onLanguageClick(value)} />
+                <div className="filter-buttons">
+                    <DropDown items={this.state.types} label="Type" onItemClick={(value) => onTypeClick(value)} />
+                    <DropDown items={languages} label="Language" onItemClick={(value) => onLanguageClick(value)} />
+                    <button className="new-button">New</button>
+                </div>
             </div>
         )
     }

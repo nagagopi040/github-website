@@ -61,11 +61,13 @@ class UserRepos extends Component {
 						{language && <span> written in {language}</span>}
 					</div>
 				}
-				{
-                    repos.length > 0 && repos.map( repo => {
-                        return <RepoCard {...repo} key={repo.id}/>
-                    })
-                }
+				<div className="repo-container">
+					{
+						repos.length > 0 && repos.map( repo => {
+							return <RepoCard {...repo} key={repo.id}/>
+						})
+					}
+				</div>
 			</div>
 		);
 	}
