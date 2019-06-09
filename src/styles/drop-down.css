@@ -53,3 +53,10 @@
 .show {
   display: block;
 }
+
+@media (max-width: 768px) {
+    .dropdown-content {
+        left: 0;
+        min-width: 200px;
+    }
+}
