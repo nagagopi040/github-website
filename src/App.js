@@ -1,27 +1,18 @@
 import React, { Component } from "react";
-import { connect } from "react-redux"
-import { bindActionCreators } from "redux";
+import UserProfile from "./containers/user-profile";
+import UserRepos from "./containers/user-repos";
 
-import { getUserInfo, getUserRepos } from "./actions";
+import "./styles/main.css";
 
-class App extends Component {  
+export default class App extends Component {
 	render() {
 		return (
-			<div>
-				Welcome to Github
+			<div className="container">
+				<div className="github-repos">
+					<UserProfile />
+					<UserRepos />
+				</div>
 			</div>
 		);
 	}
 }
-
-const mapStateToProps = state => ({
-	userData : state.userReducers.userData,
-	repos: state.userReducers.repos
-})
-
-const mapDispatchToProps = dispatch => ({
-	getUserInfo: bindActionCreators(getUserInfo, dispatch),
-	getUserRepos: bindActionCreators(getUserRepos, dispatch)
-});
-
-export default App = connect(mapStateToProps, mapDispatchToProps)(App)
